@@ -4,9 +4,9 @@ require("dotenv").config();
 const app = express();
 const port = 3000;
 //email e senha do remetente
-const user = "alissonvieiraxavier@hotmail.com";
+let user = "alissonvieiraxavier@hotmail.com";
 let senhaTesteenv = process.env.PASS;
-const pass = senhaTesteenv;
+let pass = senhaTesteenv;
 
 app.get("/", (req, res) => {
   res.send("Aplication running.");
