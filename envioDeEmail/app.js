@@ -10,7 +10,6 @@ let pass = senhaTesteenv;
 
 app.get("/", (req, res) => {
   res.send("Aplication running.");
-  console.log(senhaTesteenv);
 });
 
 app.get("/send", (req, res) => {
