@@ -13,7 +13,7 @@ console.log("running");
 
 async function bot(url, posicao) {
   //Mostrar procedimento?
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
   //endereco https;
   await page.goto(url);
@@ -25,6 +25,7 @@ async function realizaPrint() {
   for (let i = 0; i < urls.length; i++) {
     await bot(urls[i], i);
   }
+  console.log("Prints realizados");
 }
 
 realizaPrint();

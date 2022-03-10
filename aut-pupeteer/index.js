@@ -18,7 +18,7 @@ async function bot(url, posicao) {
   const page = await browser.newPage();
   //endereco https;
   await page.goto(url);
-  await page.screenshot({ path: `img/imagem${posicao}.png` });
+  await page.pdf({ path: `pdfs/pdf${posicao}.pdf` });
   await browser.close();
 }
 
