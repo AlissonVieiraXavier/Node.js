@@ -1,6 +1,5 @@
 const puppeteer = require("puppeteer");
 
-//paginas que desejo tirar print
 let urls = [
   "https://www.npmjs.com/package/puppeteer",
   "https://cursos.alura.com.br/formacao-front-end",
@@ -14,7 +13,7 @@ console.log("running");
 
 async function bot(url, posicao) {
   //Mostrar procedimento?
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   //endereco https;
   await page.goto(url);
@@ -26,7 +25,6 @@ async function realizaPrint() {
   for (let i = 0; i < urls.length; i++) {
     await bot(urls[i], i);
   }
-  console.log("Prints realizados. disponiveis na pasta 'img' ");
 }
 
 realizaPrint();
