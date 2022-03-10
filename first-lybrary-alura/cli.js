@@ -1,5 +1,6 @@
 const chalk = require("chalk");
 const pegaArquivo = require("./index");
+const validaURLs = require("./http-validacao");
 
 const caminho = process.argv;
 
