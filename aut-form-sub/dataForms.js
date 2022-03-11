@@ -6,12 +6,10 @@ class dataForm {
   IdTextArea;
 }
 
-const siteTiger = new dataForm();
-siteTiger.url ="https://site-tiger-school.vercel.app/";
-siteTiger.idNome ="#inputName";
-siteTiger.idEmail ="#inputEmail";
-siteTiger.IdTextArea ="##textAreaMensagem";
+const SiteTiger = new dataForm();
+SiteTiger.url ="https://site-tiger-school.vercel.app/";
+SiteTiger.idNome ="#inputName";
+SiteTiger.idEmail ="#inputEmail";
+SiteTiger.IdTextArea ="##textAreaMensagem";
 
-console.log(siteTiger);
-
-export default
+module.exports = SiteTiger;

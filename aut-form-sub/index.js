@@ -1,12 +1,11 @@
+const puppeteer = require('puppeteer');
 
-const puppeteer = require("puppeteer");
 let urls = ["https://site-tiger-school.vercel.app/"];
 
 async function bot(url) {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.goto(url);
- //await page.waitForNavigation({waitUntil: 'load'});
   
   await page.type("#inputName","Alisson Vieira Xavier");
   await page.type("#inputEmail", "alissonvieraxavier@hotmail.com");
