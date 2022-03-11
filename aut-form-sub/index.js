@@ -1,3 +1,4 @@
+
 const puppeteer = require("puppeteer");
 let urls = ["https://site-tiger-school.vercel.app/"];
 
@@ -5,15 +6,23 @@ async function bot(url) {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.goto(url);
-  await page.waitForTimeout(10000);
-  await page.type(
-    "inputName",
-    "Alisson Xavier || teste de formulario automatizado"
-  );
-  await page.type("inputEmmail", "alissonvieraxavier@hotmail.com");
-  await page.click("form button");
+ //await page.waitForNavigation({waitUntil: 'load'});
+  
+  await page.type("#inputName","Alisson Vieira Xavier");
+  await page.type("#inputEmail", "alissonvieraxavier@hotmail.com");
+  await page.type("#textAreaMensagem", "Teste de formulario automatizado");
+  await page.click("#formButton");
 
   await browser.close();
-}
+  
+};
 
-bot(urls[0]);
+async function RealizaTestes(urls){
+  for(let i = 0; i < urls.length;i++){
+    await bot(urls[i]);
+  }
+  console.log("Testes realizados");
+};
+
+RealizaTestes(urls);
+

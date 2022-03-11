@@ -1,17 +1,17 @@
-export default class dataForms {
-  inputname;
-  inputEmail;
-  textArea;
 
-  get email() {
-    return this.inputEmail;
-  }
-  get message() {
-    return this.textArea;
-  }
-  constructor(nome, email, message) {
-    this.inputname = nome;
-    this.inputEmail = email;
-    this.textArea = message;
-  }
+class dataForm {
+  url;
+  idNome;
+  idEmail;
+  IdTextArea;
 }
+
+const siteTiger = new dataForm();
+siteTiger.url ="https://site-tiger-school.vercel.app/";
+siteTiger.idNome ="#inputName";
+siteTiger.idEmail ="#inputEmail";
+siteTiger.IdTextArea ="##textAreaMensagem";
+
+console.log(siteTiger);
+
+export default
