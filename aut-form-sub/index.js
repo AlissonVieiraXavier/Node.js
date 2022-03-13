@@ -22,7 +22,7 @@ async function RealizaTestes(urls){
   for(let i = 0; i < urls.length;i++){
     await bot(urls[i]);
   }
-  console.log("Testes realizado");
+  console.log("Formulario preenchido e enviado.");
 };
 
 RealizaTestes(urls);
