@@ -1,0 +1,6 @@
+{
+   "mysql":{
+       "banco-de-dados":"petshop",
+       "usuario":"root"
+   } 
+}
