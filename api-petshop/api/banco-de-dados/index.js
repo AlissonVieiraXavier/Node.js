@@ -1,7 +1,13 @@
 const Sequelize = require("sequelize");
-const instancia = new Sequelize("petshop", "root", "123456", {
-  host: "127.0.0.1",
-  dialect: "mysql",
-});
+const config = require("config");
+const instancia = new Sequelize(
+  config.get("mysql.banco-de-dados"),
+  config.get("mysql.usuario"),
+  config.get("mysql.senha"),
+  {
+    host: "127.0.0.1",
+    dialect: "mysql",
+  }
+);
 
 module.exports = instancia;
