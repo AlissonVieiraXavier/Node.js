@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
-const bodyParser = require('body-parser')
+const bodyParser = require("body-parser");
+const config = require("config");
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-app.listen(3000, () => console.log("API Running!"));
+app.listen(config.get(api.porta), () => console.log("API Running!"));
