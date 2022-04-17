@@ -1,0 +1,6 @@
+{
+    "banco-de-dados":"mysql",
+    "usuario": "root",
+    "senha": "123456",
+    "host":"127.0.0.1"
+}
